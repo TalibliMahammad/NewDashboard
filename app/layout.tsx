@@ -5,8 +5,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="az">
-      <body className="bg-background overflow-x-hidden" style={styles.body}>
+    <html lang="az " suppressHydrationWarning>
+      <body className="bg-background overflow-hidden">
         {children}
       </body>
     </html>

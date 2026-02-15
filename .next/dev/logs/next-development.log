@@ -1,4273 +1,826 @@
-[00:00:01.721] Server  LOG     ✓ Ready in 1346ms
-[00:00:08.474] Server  WARN    ⚠ Cross origin request detected from 192.168.123.38 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:08.906] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className="bg-background text-foreground"
--                           className="bg-background text-foreground vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[00:12:23.457] Server  LOG     ✓ Compiled in 297ms
-[00:12:23.559] Browser ERROR   ./components/sidebar.tsx:51:5
+[00:00:00.499] Server  LOG     ✓ Ready in 359ms
+[00:00:05.874] Browser LOG     Google sign-in error: {"code":"auth/configuration-not-found","customData":{},"name":"FirebaseError"}
+[00:02:05.703] Browser LOG     Google sign-in clicked
+[00:02:06.543] Browser LOG     Google sign-in clicked
+[00:02:06.762] Browser LOG     Google sign-in clicked
+[00:07:58.000] Server  LOG     ✓ Compiled in 267ms
+[00:08:10.820] Server  LOG     ✓ Compiled in 68ms
+[00:08:18.199] Server  LOG     ✓ Compiled in 180ms
+[00:11:54.500] Server  LOG     ✓ Compiled in 316ms
+[00:11:55.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
 Parsing ecmascript source code failed
-  49 |   );
-  50 | }
-> 51 | git push -u origin main
-     |     ^^^^
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:11:55.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
+Parsing ecmascript source code failed
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:03.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
+Parsing ecmascript source code failed
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameter({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:03.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
+Parsing ecmascript source code failed
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameter({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:05.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
+Parsing ecmascript source code failed
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:05.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:66:7
+Parsing ecmascript source code failed
+  64 |       },
+  65 |       alert: { message: "Logged in with Google", type: "success" }
+> 66 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  67 |     prompt: 'select_account'
+  68 |   });
+  69 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:11.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:11.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:13.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:13.082] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:16.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:16.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:34.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:68:7
+Parsing ecmascript source code failed
+  66 |       },
+  67 |       alert: { message: "Logged in with Google", type: "success" }
+> 68 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  69 |     prompt: 'select_account'
+  70 |   });
+  71 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:34.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:68:7
+Parsing ecmascript source code failed
+  66 |       },
+  67 |       alert: { message: "Logged in with Google", type: "success" }
+> 68 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  69 |     prompt: 'select_account'
+  70 |   });
+  71 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:41.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:12:41.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:13:16.591] Server  LOG     ✓ Compiled in 114ms
+[00:13:26.239] Server  LOG     ✓ Compiled in 27ms
+[00:13:27.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:55:51
+Parsing ecmascript source code failed
+  53 | loginWithGoogle: async () => {
+  54 |   const provider = new GoogleAuthProvider();
+> 55 |    alert: { message: "Logged in with Google", type: "success" }
+     |                                                   ^
+  56 |       provider.setCustomParameters({
+  57 |     prompt: 'select_account'
+  58 |   });
 
 Expected ';', '}' or <eof>
 
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:12:53.612] Server  LOG     ✓ Compiled in 13ms
-[00:14:25.048] Server  LOG     ✓ Compiled in 15ms
-[00:14:25.104] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:27.896] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:27.952] Server  LOG     ✓ Compiled in 10ms
-[00:14:27.999] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:14:28.010] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:28.370] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:32.903] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:33.066] Server  LOG     ✓ Compiled in 26ms
-[00:14:33.129] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:14:33.478] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:34.984] Server  LOG     ✓ Compiled in 55ms
-[00:14:35.087] Browser ERROR   ./components/sidebar.tsx:51:43
-Parsing ecmascript source code failed
-  49 |          {/* Primary Navigation */}
-  50 |          <nav>
-> 51 |             {navigationsItems.map((item)=>)}
-     |                                           ^
-  52 |          </nav>
-  53 |       
-  54 |     </aside>
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:14:39.852] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:39.926] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:14:40.260] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:43.621] Server  LOG     ✓ Compiled in 11ms
-[00:14:43.722] Browser ERROR   ./components/sidebar.tsx:53:13
-Parsing ecmascript source code failed
-  51 |             {navigationsItems.map((item)=>{
-  52 |                 const 
-> 53 |             })}
-     |             ^
-  54 |          </nav>
-  55 |       
-  56 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:14:45.581] Server  LOG     ✓ Compiled in 25ms
-[00:14:45.684] Browser ERROR   ./components/sidebar.tsx:52:23
-Parsing ecmascript source code failed
-  50 |          <nav>
-  51 |             {navigationsItems.map((item)=>{
-> 52 |                 const icon
-     |                       ^^^^
-  53 |             })}
-  54 |          </nav>
-  55 |       
-
-'const' declarations must be initialized
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:14:48.277] Server  LOG     ✓ Compiled in 10ms
-[00:14:48.378] Browser ERROR   ./components/sidebar.tsx:53:13
-Parsing ecmascript source code failed
-  51 |             {navigationsItems.map((item)=>{
-  52 |                 const icon = 
-> 53 |             })}
-     |             ^
-  54 |          </nav>
-  55 |       
-  56 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:14:53.186] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:53.269] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:14:53.628] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:14:56.931] Server  LOG     ✓ Compiled in 10ms
-[00:14:57.032] Browser ERROR   ./components/sidebar.tsx:53:13
-Parsing ecmascript source code failed
-  51 |             {navigationsItems.map((item)=>{
-  52 |                 const icon = item.icon;\
-> 53 |             })}
-     |             ^
-  54 |          </nav>
-  55 |       
-  56 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:14:58.199] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:14:58.231] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:14:58.586] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:15:01.627] Server  LOG     ✓ Compiled in 13ms
-[00:15:01.727] Browser ERROR   ./components/sidebar.tsx:54:13
-Parsing ecmascript source code failed
-  52 |                 const icon = item.icon;
-  53 |                 const 
-> 54 |             })}
-     |             ^
-  55 |          </nav>
-  56 |       
-  57 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:07.813] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:15:07.891] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:15:08.242] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:15:15.301] Server  LOG     ✓ Compiled in 16ms
-[00:15:15.406] Browser ERROR   ./components/sidebar.tsx:54:13
-Parsing ecmascript source code failed
-  52 |                 const icon = item.icon;
-  53 |                 const isActive = pathname === item.
-> 54 |             })}
-     |             ^
-  55 |          </nav>
-  56 |       
-  57 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:18.446] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:15:18.516] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:15:18.867] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:15:20.686] Server  LOG     ✓ Compiled in 30ms
-[00:15:20.787] Browser ERROR   ./components/sidebar.tsx:54:13
-Parsing ecmascript source code failed
-  52 |                 const icon = item.icon;
-  53 |                 const isActive = pathname === item.href;\
-> 54 |             })}
-     |             ^
-  55 |          </nav>
-  56 |       
-  57 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:22.752] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:15:22.776] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:15:23.143] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:15:28.786] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:15:28.847] Server  LOG     ✓ Compiled in 8ms
-[00:15:28.915] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:15:29.273] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:15:31.541] Server  LOG     ✓ Compiled in 31ms
-[00:15:31.642] Browser ERROR   ./components/sidebar.tsx:58:13
-Parsing ecmascript source code failed
-  56 |                     
-  57 |                  )
-> 58 |             })}
-     |             ^
-  59 |          </nav>
-  60 |       
-  61 |     </aside>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:44.322] Server  LOG     ✓ Compiled in 10ms
-[00:15:44.424] Browser ERROR   ./components/sidebar.tsx:55:1
-Parsing ecmascript source code failed
-  53 |                 const isActive = pathname === item.href;
-  54 |                  return(
-> 55 | <
-     | ^
-  56 |
-  57 |                  )
-  58 |             })}
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:46.300] Server  LOG     ✓ Compiled in 9ms
-[00:15:46.401] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:47.529] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link 
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:49.998] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link key
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:51.374] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link key=
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:53.840] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link key={}
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:56.076] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link key={}
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:15:59.392] Browser ERROR   ./components/sidebar.tsx:57:18
-Parsing ecmascript source code failed
-  55 | <Link key={item.key}
-  56 |
-> 57 |                  )
-     |                  ^
-  58 |             })}
-  59 |          </nav>
-  60 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:01.840] Browser ERROR   ./components/sidebar.tsx:58:18
-Parsing ecmascript source code failed
-  56 |
-  57 |
-> 58 |                  )
-     |                  ^
-  59 |             })}
-  60 |          </nav>
-  61 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:06.554] Server  LOG     ✓ Compiled in 10ms
-[00:16:06.655] Browser ERROR   ./components/sidebar.tsx:55:21
-Parsing ecmascript source code failed
-  53 |                 const isActive = pathname === item.href;
-  54 |                  return(
-> 55 | <Link key={item.key}\
-     |                     ^
-  56 |
-  57 |
-  58 |                  )
-
-Expected unicode escape
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:07.741] Server  LOG     ✓ Compiled in 24ms
-[00:16:07.843] Browser ERROR   ./components/sidebar.tsx:58:18
-Parsing ecmascript source code failed
-  56 |
-  57 |
-> 58 |                  )
-     |                  ^
-  59 |             })}
-  60 |          </nav>
-  61 |       
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:11.473] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:11.479] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:11.834] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:16:25.012] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:25.050] Server  LOG     ✓ Compiled in 12ms
-[00:16:25.095] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:25.433] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:16:27.865] Server  LOG     ✓ Compiled in 17ms
-[00:16:27.968] Browser ERROR   ./components/sidebar.tsx:59:1
-Parsing ecmascript source code failed
-  57 | >
-  58 |
-> 59 | </Link>
-     | ^
-  60 |
-  61 |
-  62 |                  )
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:27.968] Browser ERROR   ./components/sidebar.tsx:59:2
-Parsing ecmascript source code failed
-  57 | >
-  58 |
-> 59 | </Link>
-     |  ^^^^^^
-  60 |
-  61 |
-  62 |                  )
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:31.981] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:32.133] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:32.503] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:16:36.824] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:36.913] Server  LOG     ✓ Compiled in 10ms
-[00:16:36.985] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:37.377] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:16:43.974] Server  LOG     ✓ Compiled in 12ms
-[00:16:44.075] Browser ERROR   ./components/sidebar.tsx:60:1
-Parsing ecmascript source code failed
-  58 | >
-  59 |
-> 60 | </Link>
-     | ^
-  61 |
-  62 |
-  63 |                  )
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:44.075] Browser ERROR   ./components/sidebar.tsx:60:2
-Parsing ecmascript source code failed
-  58 | >
-  59 |
-> 60 | </Link>
-     |  ^^^^^^
-  61 |
-  62 |
-  63 |                  )
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:45.700] Browser ERROR   ./components/sidebar.tsx:60:1
-Parsing ecmascript source code failed
-  58 | >
-  59 |
-> 60 | </Link>
-     | ^
-  61 |
-  62 |
-  63 |                  )
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:45.700] Browser ERROR   ./components/sidebar.tsx:60:2
-Parsing ecmascript source code failed
-  58 | >
-  59 |
-> 60 | </Link>
-     |  ^^^^^^
-  61 |
-  62 |
-  63 |                  )
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:16:54.670] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:54.834] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:55.187] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:16:57.895] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:16:57.933] Server  LOG     ✓ Compiled in 8ms
-[00:16:57.977] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:16:58.325] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:00.703] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:00.826] Server  LOG     ✓ Compiled in 13ms
-[00:17:00.900] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:01.249] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:02.710] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:02.801] Server  LOG     ✓ Compiled in 26ms
-[00:17:02.845] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:03.257] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:03.996] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:04.066] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:04.071] Server  LOG     ✓ Compiled in 9ms
-[00:17:04.483] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:06.485] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:06.559] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:06.565] Server  LOG     ✓ Compiled in 9ms
-[00:17:06.966] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:07.834] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:07.870] Server  LOG     ✓ Compiled in 7ms
-[00:17:07.914] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:08.339] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:17:19.472] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:17:19.510] Server  LOG     ✓ Compiled in 11ms
-[00:17:19.585] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:17:19.924] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:18:31.380] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:18:31.445] Server  LOG     ✓ Compiled in 122ms
-[00:18:31.497] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:18:31.916] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:00.362] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:00.419] Server  LOG     ✓ Compiled in 20ms
-[00:19:00.464] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:00.907] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:03.895] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:03.924] Server  LOG     ✓ Compiled in 21ms
-[00:19:04.018] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:04.396] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:11.977] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:12.051] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:12.057] Server  LOG     ✓ Compiled in 10ms
-[00:19:12.395] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:15.412] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:15.438] Server  LOG     ✓ Compiled in 16ms
-[00:19:15.606] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:15.964] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:19.333] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:19.390] Server  LOG     ✓ Compiled in 18ms
-[00:19:19.462] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:19.469] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_global_6b2d0839.css
-[00:19:19.809] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:21.076] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:21.103] Server  LOG     ✓ Compiled in 16ms
-[00:19:21.191] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:21.548] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:23.018] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:23.057] Server  LOG     ✓ Compiled in 21ms
-[00:19:23.098] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:23.444] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:25.510] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:25.561] Server  LOG     ✓ Compiled in 9ms
-[00:19:25.611] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:26.070] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:28.665] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:28.687] Server  LOG     ✓ Compiled in 14ms
-[00:19:28.785] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:29.117] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:31.268] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:31.320] Server  LOG     ✓ Compiled in 9ms
-[00:19:31.394] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:31.783] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:34.405] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:34.516] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:34.526] Server  LOG     ✓ Compiled in 15ms
-[00:19:34.528] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_global_6b2d0839.css
-[00:19:34.894] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:37.652] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:37.749] Server  LOG     ✓ Compiled in 24ms
-[00:19:37.868] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:37.879] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_global_6b2d0839.css
-[00:19:38.242] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:44.971] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:45.010] Server  LOG     ✓ Compiled in 9ms
-[00:19:45.069] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:45.480] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:50.651] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:50.688] Server  LOG     ✓ Compiled in 11ms
-[00:19:50.744] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:51.129] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:52.763] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:52.842] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:52.848] Server  LOG     ✓ Compiled in 10ms
-[00:19:53.190] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:54.840] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:54.911] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:54.917] Server  LOG     ✓ Compiled in 12ms
-[00:19:55.341] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:57.463] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:57.525] Server  LOG     ✓ Compiled in 9ms
-[00:19:57.573] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:19:57.934] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:19:59.857] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:19:59.909] Server  LOG     ✓ Compiled in 22ms
-[00:19:59.949] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:20:00.344] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:20:10.552] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:20:10.607] Server  LOG     ✓ Compiled in 8ms
-[00:20:10.686] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:20:11.081] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:20:29.727] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:20:29.801] Server  LOG     ✓ Compiled in 9ms
-[00:20:29.869] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:20:30.240] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:20:35.559] Server  LOG     ✓ Compiled in 52ms
-[00:20:35.661] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ?
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:37.671] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? bg
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:40.450] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? bg-prim
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:47.811] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:49.602] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary text"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:52.066] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary text-primary"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:55.547] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary text-primary-foreground"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:20:58.209] Server  LOG     ✓ Compiled in 15ms
-[00:20:58.309] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary text-primary-foreground shadow"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:00.482] Server  LOG     ✓ Compiled in 18ms
-[00:21:00.583] Browser ERROR   ./components/sidebar.tsx:63:13
-Parsing ecmascript source code failed
-  61 |             isActive 
-  62 |             ? "bg-primary text-primary-foreground shadow-lg"
-> 63 |             )}
-     |             ^
-  64 |             ></Link>
-  65 |           );
-  66 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:44.281] Server  LOG     ✓ Compiled in 36ms
-[00:21:44.382] Browser ERROR   ./components/sidebar.tsx:62:61
-Parsing ecmascript source code failed
-  60 |                 "flex items-center gap-3 px-4 py-3 rounded-lg transition-all  duration-200",
-  61 |             isActive 
-> 62 |             ? "bg-primary text-primary-foreground shadow-lg",
-     |                                                             ^
-  63 |             )}
-  64 |             ></Link>
-  65 |           );
-
-Expected '</', got ','
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:45.666] Browser ERROR   ./components/sidebar.tsx:62:61
-Parsing ecmascript source code failed
-  60 |                 "flex items-center gap-3 px-4 py-3 rounded-lg transition-all  duration-200",
-  61 |             isActive 
-> 62 |             ? "bg-primary text-primary-foreground shadow-lg",
-     |                                                             ^
-  63 |             
-  64 |             )}
-  65 |             ></Link>
-
-Expected '</', got ','
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:47.702] Server  LOG     ✓ Compiled in 9ms
-[00:21:47.804] Browser ERROR   ./components/sidebar.tsx:64:13
-Parsing ecmascript source code failed
-  62 |             ? "bg-primary text-primary-foreground shadow-lg"
-  63 |
-> 64 |             )}
-     |             ^
-  65 |             ></Link>
-  66 |           );
-  67 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:50.360] Browser ERROR   ./components/sidebar.tsx:64:13
-Parsing ecmascript source code failed
-  62 |             ? "bg-primary text-primary-foreground shadow-lg"
-  63 |
-> 64 |             )}
-     |             ^
-  65 |             ></Link>
-  66 |           );
-  67 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:52.308] Server  LOG     ✓ Compiled in 20ms
-[00:21:52.409] Browser ERROR   ./components/sidebar.tsx:62:61
-Parsing ecmascript source code failed
-  60 |                 "flex items-center gap-3 px-4 py-3 rounded-lg transition-all  duration-200",
-  61 |             isActive 
-> 62 |             ? "bg-primary text-primary-foreground shadow-lg";
-     |                                                             ^
-  63 |
-  64 |             )}
-  65 |             ></Link>
-
-Expected '</', got ';'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:54.135] Server  LOG     ✓ Compiled in 53ms
-[00:21:54.236] Browser ERROR   ./components/sidebar.tsx:65:13
-Parsing ecmascript source code failed
-  63 |             
-  64 |
-> 65 |             )}
-     |             ^
-  66 |             ></Link>
-  67 |           );
-  68 |         })}
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:21:56.105] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:21:56.245] Server  ERROR   ⨯ ReferenceError: navigationsItems is not defined
-[00:21:56.251] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_global_6b2d0839.css
-[00:21:56.650] Browser ERROR   uncaughtError: ReferenceError: navigationsItems is not defined
-[00:22:15.171] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:22:15.192] Server  LOG     ✓ Compiled in 37ms
-[00:22:15.301] Server  ERROR   Each child in a list should have a unique "key" prop.
-
-Check the render method of `Sidebar`. See https://react.dev/link/warning-keys for more information.
-[00:22:15.649] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
-
-Check the render method of `Sidebar`. 
-[00:22:32.996] Server  LOG     ✓ Compiled in 24ms
-[00:23:03.100] Server  LOG     ✓ Compiled in 74ms
-[00:23:03.202] Browser ERROR   ./components/sidebar.tsx:69:13
-Parsing ecmascript source code failed
-  67 |
-  68 |                 <
-> 69 |             </Link>
-     |             ^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:03.202] Browser ERROR   ./components/sidebar.tsx:69:14
-Parsing ecmascript source code failed
-  67 |
-  68 |                 <
-> 69 |             </Link>
-     |              ^^^^^^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:05.762] Browser ERROR   ./components/sidebar.tsx:69:13
-Parsing ecmascript source code failed
-  67 |
-  68 |                 <Icon
-> 69 |             </Link>
-     |             ^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:05.762] Browser ERROR   ./components/sidebar.tsx:69:14
-Parsing ecmascript source code failed
-  67 |
-  68 |                 <Icon
-> 69 |             </Link>
-     |              ^^^^^^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:07.228] Browser ERROR   ./components/sidebar.tsx:70:13
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon
-> 70 |             </Link>
-     |             ^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:07.228] Browser ERROR   ./components/sidebar.tsx:70:14
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon
-> 70 |             </Link>
-     |              ^^^^^^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:11.007] Browser ERROR   ./components/sidebar.tsx:70:13
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon className=""
-> 70 |             </Link>
-     |             ^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:11.007] Browser ERROR   ./components/sidebar.tsx:70:14
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon className=""
-> 70 |             </Link>
-     |              ^^^^^^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:13.206] Browser ERROR   ./components/sidebar.tsx:70:13
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon className=""
-> 70 |             </Link>
-     |             ^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:13.206] Browser ERROR   ./components/sidebar.tsx:70:14
-Parsing ecmascript source code failed
-  68 |
-  69 |                 <Icon className=""
-> 70 |             </Link>
-     |              ^^^^^^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:21.266] Server  LOG     ✓ Compiled in 58ms
-[00:23:32.302] Server  LOG     ✓ Compiled in 19ms
-[00:23:32.403] Browser ERROR   ./components/sidebar.tsx:68:13
-Parsing ecmascript source code failed
-  66 |             >
-  67 | <Icon
-> 68 |             </Link>
-     |             ^
-  69 |           );
-  70 |         })}
-  71 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:32.403] Browser ERROR   ./components/sidebar.tsx:68:14
-Parsing ecmascript source code failed
-  66 |             >
-  67 | <Icon
-> 68 |             </Link>
-     |              ^^^^^^
-  69 |           );
-  70 |         })}
-  71 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:33.521] Browser ERROR   ./components/sidebar.tsx:68:13
-Parsing ecmascript source code failed
-  66 |             >
-  67 | <Icon 
-> 68 |             </Link>
-     |             ^
-  69 |           );
-  70 |         })}
-  71 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:33.521] Browser ERROR   ./components/sidebar.tsx:68:14
-Parsing ecmascript source code failed
-  66 |             >
-  67 | <Icon 
-> 68 |             </Link>
-     |              ^^^^^^
-  69 |           );
-  70 |         })}
-  71 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:23:34.810] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:23:40.763] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:23:40.884] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:23:40.896] Server  LOG     ✓ Compiled in 153ms
-[00:23:40.898] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:23:41.297] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:23:48.715] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:23:48.774] Server  LOG     ✓ Compiled in 74ms
-[00:23:49.222] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className="bg-background text-foreground"
--                           className="bg-background text-foreground vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[00:23:51.146] Server  LOG     ✓ Compiled in 18ms
-[00:23:51.247] Browser ERROR   ./components/sidebar.tsx:68:2
-Parsing ecmascript source code failed
-  66 |             )}
-  67 |             >
-> 68 | />
-     |  ^
-  69 |             </Link>
-  70 |           );
-  71 |         })}
-
-Unexpected token. Did you mean `{'>'}` or `&gt;`?
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:01.007] Server  LOG     ✓ Compiled in 32ms
-[00:24:01.108] Browser ERROR   ./components/sidebar.tsx:69:13
-Parsing ecmascript source code failed
-  67 |             >
-  68 |                 <icon
-> 69 |             </Link>
-     |             ^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:01.108] Browser ERROR   ./components/sidebar.tsx:69:14
-Parsing ecmascript source code failed
-  67 |             >
-  68 |                 <icon
-> 69 |             </Link>
-     |              ^^^^^^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:04.142] Browser ERROR   ./components/sidebar.tsx:69:13
-Parsing ecmascript source code failed
-  67 |             >
-  68 |                 <Icon
-> 69 |             </Link>
-     |             ^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:04.142] Browser ERROR   ./components/sidebar.tsx:69:14
-Parsing ecmascript source code failed
-  67 |             >
-  68 |                 <Icon
-> 69 |             </Link>
-     |              ^^^^^^
-  70 |           );
-  71 |         })}
-  72 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:05.457] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:38.889] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:24:38.935] Server  LOG     ✓ Compiled in 9ms
-[00:24:39.005] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:39.012] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:39.390] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:43.428] Server  LOG     ✓ Compiled in 91ms
-[00:24:43.529] Browser ERROR   ./components/sidebar.tsx:15:3
-Ecmascript file had an error
-  13 |   LogOut,
-  14 |   BarChart,
-> 15 |   Icon,
-     |   ^^^^
-  16 | } from "lucide-react";
-  17 | import Link from "next/link";
-  18 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:24:46.284] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:24:46.313] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:46.684] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:49.795] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:24:49.846] Server  LOG     ✓ Compiled in 39ms
-[00:24:49.899] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:50.339] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:24:53.874] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:24:53.930] Server  LOG     ✓ Compiled in 65ms
-[00:25:02.491] Server  LOG     ✓ Compiled in 75ms
-[00:25:02.594] Browser ERROR   ./components/sidebar.tsx:70:13
-Parsing ecmascript source code failed
-  68 |             > 
-  69 |             <Icon
-> 70 |             </Link>
-     |             ^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:25:02.594] Browser ERROR   ./components/sidebar.tsx:70:14
-Parsing ecmascript source code failed
-  68 |             > 
-  69 |             <Icon
-> 70 |             </Link>
-     |              ^^^^^^
-  71 |           );
-  72 |         })}
-  73 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:25:04.395] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:08.646] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:25:08.725] Server  LOG     ✓ Compiled in 51ms
-[00:25:08.777] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:08.785] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:09.174] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:32.655] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:25:32.695] Server  LOG     ✓ Compiled in 82ms
-[00:25:32.752] Server  ERROR   ⨯ ReferenceError: Icon is not defined
-[00:25:33.108] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:25:42.813] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:25:42.900] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:42.906] Server  LOG     ✓ Compiled in 86ms
-[00:25:43.249] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:25:46.143] Server  LOG     ✓ Compiled in 42ms
-[00:25:46.245] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:25:48.740] Server  LOG     ✓ Compiled in 91ms
-[00:25:48.842] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:25:55.810] Server  LOG     ✓ Compiled in 71ms
-[00:25:55.912] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:25:57.752] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:26:09.115] Server  LOG     ✓ Compiled in 36ms
-[00:26:09.218] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:26:23.437] Server  LOG     ✓ Compiled in 40ms
-[00:26:23.539] Browser ERROR   ./components/sidebar.tsx:16:3
-Ecmascript file had an error
-  14 |   BarChart,
-  15 |   Icon,
-> 16 |   Icon,
-     |   ^^^^
-  17 | } from "lucide-react";
-  18 | import Link from "next/link";
-  19 | import { usePathname } from "next/navigation";
-
-the name `Icon` is defined multiple times
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:26:44.921] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:26:45.031] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:26:45.038] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/app_global_6b2d0839.css
-[00:26:45.384] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:02.589] Server  LOG     ✓ Compiled in 45ms
-[00:27:02.691] Browser ERROR   ./components/sidebar.tsx:71:21
-Parsing ecmascript source code failed
-  69 |             > 
-  70 |             </Link>
-> 71 |               <Icon className="w-5 h-5 flex-shrink-0" />
-     |                     ^^^^^^^^^
-  72 |           );
-  73 |         })}
-  74 |       </nav>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:27:03.690] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:05.780] Server  LOG     ✓ Compiled in 36ms
-[00:27:05.839] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:08.871] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:08.941] Server  LOG     ✓ Compiled in 41ms
-[00:27:09.000] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:09.006] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:09.368] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:19.243] Server  LOG     ✓ Compiled in 72ms
-[00:27:19.346] Browser ERROR   ./components/sidebar.tsx:73:11
-Parsing ecmascript source code failed
-  71 |             </Link>
-  72 |           );
-> 73 |         })}
-     |           ^
-  74 |       </nav>
-  75 |     </aside>
-  76 |   );
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:27:22.097] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:22.146] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:22.487] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:27:27.679] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:27.755] Server  LOG     ✓ Compiled in 51ms
-[00:27:48.484] Server  LOG     ✓ Compiled in 23ms
-[00:27:51.887] Server  LOG     ✓ Compiled in 62ms
-[00:27:51.989] Browser ERROR   ./components/sidebar.tsx:71:16
-Parsing ecmascript source code failed
-  69 |             > 
-  70 |         <Icon className="w-5 h-5 flex-shrink-0" iconNode={[]} />
-> 71 |         <span>{</span>
-     |                ^
-  72 |             </Link>
-  73 |           );
-  74 |         })}
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:27:51.989] Browser ERROR   ./components/sidebar.tsx:71:17
-Parsing ecmascript source code failed
-  69 |             > 
-  70 |         <Icon className="w-5 h-5 flex-shrink-0" iconNode={[]} />
-> 71 |         <span>{</span>
-     |                 ^^^^^^
-  72 |             </Link>
-  73 |           );
-  74 |         })}
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:28:09.103] Server  LOG     ✓ Compiled in 38ms
-[00:28:09.157] Browser ERROR   uncaughtError: TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
-[00:28:12.400] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:28:12.477] Server  ERROR   ⨯ ReferenceError: ite is not defined
-[00:28:12.483] Server  LOG     ✓ Compiled in 23ms
-[00:28:12.820] Browser ERROR   uncaughtError: ReferenceError: ite is not defined
-[00:28:16.672] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:28:16.719] Server  LOG     ✓ Compiled in 39ms
-[00:28:16.801] Server  ERROR   ⨯ TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
-[00:28:17.199] Browser ERROR   uncaughtError: TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
-[00:28:22.564] Server  LOG     ✓ Compiled in 56ms
-[00:28:22.666] Browser ERROR   ./components/sidebar.tsx:70:48
-Parsing ecmascript source code failed
-  68 |             )}
-  69 |             > 
-> 70 |         <Icon className="w-5 h-5 flex-shrink-0"} />
-     |                                                ^
-  71 |         <span>{item.name}</span>
-  72 |             </Link>
-  73 |           );
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:28:31.306] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:28:31.409] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:28:31.753] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:28:47.787] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:28:47.825] Server  LOG     ✓ Compiled in 28ms
-[00:28:47.882] Server  ERROR   ⨯ TypeError: icon is not a function
-[00:28:48.282] Browser ERROR   uncaughtError: TypeError: icon is not a function
-[00:29:28.129] Server  LOG     ✓ Compiled in 71ms
-[00:29:28.231] Browser ERROR   ./components/sidebar.tsx:70:48
-Parsing ecmascript source code failed
-  68 |             )}
-  69 |             > 
-> 70 |         <Icon className="w-5 h-5 flex-shrink-0"}/>
-     |                                                ^
-  71 |         <span>{item.name}</span>
-  72 |             </Link>
-  73 |           );
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:29:29.452] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:29:29.536] Server  ERROR   ⨯ TypeError: Cannot read properties of undefined (reading 'map')
-[00:29:29.925] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:30:55.260] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:30:55.300] Server  LOG     ✓ Compiled in 124ms
-[00:30:55.357] Server  ERROR   ⨯ ReferenceError: Icon is not defined
-[00:30:55.716] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:31:41.109] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:31:41.173] Server  LOG     ✓ Compiled in 10ms
-[00:31:41.230] Server  ERROR   ⨯ TypeError: icon is not a function
-[00:31:41.584] Browser ERROR   uncaughtError: TypeError: icon is not a function
-[00:31:51.980] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:31:52.040] Server  LOG     ✓ Compiled in 46ms
-[00:31:54.506] Server  LOG     ✓ Compiled in 9ms
-[00:31:57.863] Server  LOG     ✓ Compiled in 77ms
-[00:31:59.123] Server  LOG     ✓ Compiled in 39ms
-[00:31:59.225] Browser ERROR   ./components/sidebar.tsx:70:3
-Parsing ecmascript source code failed
-  68 |             )}
-  69 |             > 
-> 70 | </>
-     |   ^
-  71 |         <span>{item.name}</span>
-  72 |             </Link>
-  73 |           );
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:31:59.225] Browser ERROR   ./components/sidebar.tsx:72:14
-Parsing ecmascript source code failed
-  70 | </>
-  71 |         <span>{item.name}</span>
-> 72 |             </Link>
-     |              ^^^^^^
-  73 |           );
-  74 |         })}
-  75 |       </nav>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:03.644] Browser ERROR   ./components/sidebar.tsx:71:20
-Parsing ecmascript source code failed
-  69 |             > 
-  70 | </Icon>
-> 71 |         <span>{item.name}</span>
-     |                    ^
-  72 |             </Link>
-  73 |           );
-  74 |         })}
-
-Expected a semicolon
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:03.644] Browser ERROR   ./components/sidebar.tsx:71:9
-Parsing ecmascript source code failed
-  69 |             > 
-  70 | </Icon>
-> 71 |         <span>{item.name}</span>
-     |         ^
-  72 |             </Link>
-  73 |           );
-  74 |         })}
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:04.932] Server  LOG     ✓ Compiled in 48ms
-[00:32:05.034] Browser ERROR   ./components/sidebar.tsx:70:8
-Parsing ecmascript source code failed
-  68 |             )}
-  69 |             > 
-> 70 | </Icon className="w-5 h-5" />
-     |        ^^^^^^^^^
-  71 |         <span>{item.name}</span>
-  72 |             </Link>
-  73 |           );
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:12.090] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:32:13.882] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:13.959] Server  LOG     ✓ Compiled in 13ms
-[00:32:14.054] Server  ERROR   ⨯ ReferenceError: Icon is not defined
-[00:32:14.068] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:32:14.422] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:32:21.190] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:21.274] Server  LOG     ✓ Compiled in 29ms
-[00:32:21.347] Server  ERROR   ⨯ ReferenceError: Icon is not defined
-[00:32:21.704] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:32:24.893] Server  LOG     ✓ Compiled in 68ms
-[00:32:24.995] Browser ERROR   ./components/sidebar.tsx:66:50
-Parsing ecmascript source code failed
-  64 |               )}
-  65 |             >
-> 66 |               <Icon className="w-5 h-5" iconNode=[] />
-     |                                                  ^
-  67 |               <span>{item.name}</span>
-  68 |             </Link>
-  69 |           );
-
-Expected '</', got '['
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:37.104] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:37.196] Server  ERROR   ⨯ TypeError: icon is not a function
-[00:32:37.610] Browser ERROR   uncaughtError: TypeError: icon is not a function
-[00:32:40.699] Server  LOG     ✓ Compiled in 46ms
-[00:32:40.800] Browser ERROR   ./components/sidebar.tsx:66:50
-Parsing ecmascript source code failed
-  64 |               )}
-  65 |             >
-> 66 |               <Icon className="w-5 h-5" iconNode=[] />
-     |                                                  ^
-  67 |               <span>{item.name}</span>
-  68 |             </Link>
-  69 |           );
-
-Expected '</', got '['
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:32:46.863] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:32:56.410] Server  LOG     ✓ Compiled in 45ms
-[00:32:56.500] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:33:07.487] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:33:07.540] Server  LOG     ✓ Compiled in 26ms
-[00:33:07.922] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className="bg-background text-foreground"
--                           className="bg-background text-foreground vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[00:33:11.731] Server  LOG     ✓ Compiled in 76ms
-[00:33:11.833] Browser ERROR   ./components/sidebar.tsx:66:43
-Parsing ecmascript source code failed
-  64 |               )}
-  65 |             >
-> 66 |               <icon className="w-5 h-5" />}
-     |                                           ^
-  67 |               <span>{item.name}</span>
-  68 |             </Link>
-  69 |           );
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:33:13.318] Browser ERROR   ./components/sidebar.tsx:66:37
-Parsing ecmascript source code failed
-  64 |               )}
-  65 |             >
-> 66 |         <icon className="w-5 h-5" />}
-     |                                     ^
-  67 |               <span>{item.name}</span>
-  68 |             </Link>
-  69 |           );
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:33:30.218] Server  LOG     ✓ Compiled in 36ms
-[00:33:30.280] Browser ERROR   uncaughtError: ReferenceError: Icon is not defined
-[00:33:47.804] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:33:47.897] Server  LOG     ✓ Compiled in 38ms
-[00:34:01.804] Server  LOG     ✓ Compiled in 45ms
-[00:34:05.056] Server  LOG     ✓ Compiled in 37ms
-[00:34:08.255] Server  LOG     ✓ Compiled in 46ms
-[00:34:09.902] Server  LOG     ✓ Compiled in 34ms
-[00:34:14.259] Server  LOG     ✓ Compiled in 57ms
-[00:34:16.095] Server  LOG     ✓ Compiled in 34ms
-[00:34:28.537] Server  LOG     ✓ Compiled in 22ms
-[00:34:43.998] Server  LOG     ✓ Compiled in 27ms
-[00:35:41.324] Server  LOG     ✓ Compiled in 40ms
-[00:35:42.893] Server  LOG     ✓ Compiled in 34ms
-[00:35:50.810] Server  LOG     ✓ Compiled in 35ms
-[00:35:53.859] Server  LOG     ✓ Compiled in 35ms
-[00:35:55.160] Server  LOG     ✓ Compiled in 20ms
-[00:35:57.077] Server  LOG     ✓ Compiled in 85ms
-[00:36:07.009] Server  LOG     ✓ Compiled in 41ms
-[00:36:11.182] Server  LOG     ✓ Compiled in 40ms
-[00:36:13.833] Server  LOG     ✓ Compiled in 34ms
-[00:36:16.053] Server  LOG     ✓ Compiled in 21ms
-[00:36:17.420] Server  LOG     ✓ Compiled in 42ms
-[00:37:00.913] Server  LOG     ✓ Compiled in 53ms
-[00:37:06.071] Server  LOG     ✓ Compiled in 9ms
-[00:37:10.150] Server  LOG     ✓ Compiled in 45ms
-[00:37:12.086] Server  LOG     ✓ Compiled in 39ms
-[00:37:16.899] Server  LOG     ✓ Compiled in 38ms
-[00:37:21.774] Server  LOG     ✓ Compiled in 37ms
-[00:37:25.855] Server  LOG     ✓ Compiled in 36ms
-[00:37:28.133] Server  LOG     ✓ Compiled in 34ms
-[00:37:31.445] Server  LOG     ✓ Compiled in 9ms
-[00:37:32.911] Server  LOG     ✓ Compiled in 16ms
-[00:37:35.213] Server  LOG     ✓ Compiled in 64ms
-[00:37:36.598] Server  LOG     ✓ Compiled in 43ms
-[00:37:37.998] Server  LOG     ✓ Compiled in 15ms
-[00:37:48.182] Server  LOG     ✓ Compiled in 42ms
-[00:37:50.837] Server  LOG     ✓ Compiled in 35ms
-[00:38:21.125] Server  LOG     ✓ Compiled in 22ms
-[00:38:23.998] Server  LOG     ✓ Compiled in 49ms
-[00:38:29.212] Server  LOG     ✓ Compiled in 49ms
-[00:38:31.502] Server  LOG     ✓ Compiled in 30ms
-[00:38:36.641] Server  LOG     ✓ Compiled in 44ms
-[00:39:01.432] Server  LOG     ✓ Compiled in 13ms
-[00:39:56.364] Server  LOG     ✓ Compiled in 125ms
-[00:39:56.449] Browser ERROR   uncaughtError: ReferenceError: Bar is not defined
-[00:39:59.353] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:39:59.393] Server  LOG     ✓ Compiled in 101ms
-[00:40:05.733] Server  LOG     ✓ Compiled in 137ms
-[00:41:03.820] Server  LOG     ✓ Compiled in 23ms
-[00:41:03.876] Browser ERROR   uncaughtError: ReferenceError: secon is not defined
-[00:41:05.866] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:41:05.910] Server  LOG     ✓ Compiled in 22ms
-[00:41:05.964] Server  ERROR   ⨯ ReferenceError: secondary is not defined
-[00:41:05.973] Browser ERROR   uncaughtError: ReferenceError: secondary is not defined
-[00:41:06.322] Browser ERROR   uncaughtError: ReferenceError: secondary is not defined
-[00:41:10.582] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:41:10.641] Server  LOG     ✓ Compiled in 40ms
-[00:41:10.682] Server  ERROR   Functions are not valid as a React child. This may happen if you return map instead of <map /> from render. Or maybe you meant to call this function rather than return it.
-[00:41:11.034] Browser ERROR   Functions are not valid as a React child. This may happen if you return %s instead of <%s /> from render. Or maybe you meant to call this function rather than return it.
-  <%s>{%s}</%s> map map div map div
-[00:41:11.034] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className="bg-background text-foreground"
--                           className="bg-background text-foreground vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[00:41:14.526] Server  LOG     ✓ Compiled in 12ms
-[00:41:14.585] Browser ERROR   uncaughtError: ReferenceError: item is not defined
-[00:41:16.132] Server  LOG     ✓ Compiled in 17ms
-[00:41:16.233] Browser ERROR   ./components/sidebar.tsx:77:29
-Parsing ecmascript source code failed
-  75 |
-  76 |       <div>
-> 77 | {secondaryItems.map((item)=>)}
-     |                             ^
-  78 |       </div>
-  79 |     </aside>
-  80 |   );
-
-Expected '</', got ')'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:41:21.168] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:41:40.300] Server  LOG     ✓ Compiled in 14ms
-[00:41:41.384] Server  LOG     ✓ Compiled in 14ms
-[00:41:41.486] Browser ERROR   ./components/sidebar.tsx:81:7
-Parsing ecmascript source code failed
-  79 |         const isActive = pathname === item.href;
-  80 |         return (
-> 81 |       })}</div>
-     |       ^
-  82 |     </aside>
-  83 |   );
-  84 | }
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:41:42.735] Browser ERROR   ./components/sidebar.tsx:83:7
-Parsing ecmascript source code failed
-  81 |           <Link
-  82 |             key={item.href}
-> 83 |       })}</div>
-     |       ^
-  84 |     </aside>
-  85 |   );
-  86 | }
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:42:12.469] Server  LOG     ✓ Compiled in 8ms
-[00:42:21.457] Server  LOG     ✓ Compiled in 71ms
-[00:42:21.558] Browser ERROR   ./components/sidebar.tsx:85:17
-Parsing ecmascript source code failed
-  83 |             href={item.href}
-  84 |             className={cn(
-> 85 |               ""`,
-     |                 ^^
-> 86 |               isActive
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 87 |                 ? "bg-primary text-primary-foreground shadow-lg"
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 88 |                 : "text-muted-foreground hover:text-foreground hover:bg-secondary",
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 89 |             )}
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 90 |           >
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 91 |             <Icon className="w-5 h-5 flex-shrink-0" />
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 92 |             <span className="text-sm font-medium">{item.name}</span>
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 93 |           </Link>
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 94 |         );
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 95 |       })}</div>
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 96 |     </aside>
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 97 |   );
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 98 | }
-     | ^^^^^^^^^^^^^^^^^^^^^^
-> 99 | 
-     | ^
-
-Unterminated template
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:42:31.234] Server  LOG     ✓ Compiled in 32ms
-[00:42:35.102] Server  LOG     ✓ Compiled in 39ms
-[00:42:36.617] Server  LOG     ✓ Compiled in 9ms
-[00:42:37.954] Server  LOG     ✓ Compiled in 53ms
-[00:42:41.018] Server  LOG     ✓ Compiled in 42ms
-[00:42:43.609] Server  LOG     ✓ Compiled in 34ms
-[00:42:47.566] Server  LOG     ✓ Compiled in 58ms
-[00:42:50.978] Server  LOG     ✓ Compiled in 47ms
-[00:43:23.189] Server  LOG     ✓ Compiled in 32ms
-[00:43:35.463] Server  LOG     ✓ Compiled in 45ms
-[00:43:41.115] Server  LOG     ✓ Compiled in 47ms
-[00:43:46.503] Server  LOG     ✓ Compiled in 35ms
-[00:43:47.682] Server  LOG     ✓ Compiled in 10ms
-[00:43:49.296] Server  LOG     ✓ Compiled in 45ms
-[00:43:50.936] Server  LOG     ✓ Compiled in 37ms
-[00:43:54.382] Server  LOG     ✓ Compiled in 24ms
-[00:43:59.200] Server  LOG     ✓ Compiled in 47ms
-[00:44:02.105] Server  LOG     ✓ Compiled in 28ms
-[00:44:03.464] Server  LOG     ✓ Compiled in 39ms
-[00:44:09.246] Server  LOG     ✓ Compiled in 45ms
-[00:44:09.348] Browser ERROR   ./components/sidebar.tsx:86:16
-Parsing ecmascript source code failed
-  84 |             className={cn(
-  85 |               "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200",
-> 86 |                ",
-     |                ^^
-  87 |               isActive
-  88 |                 ? "bg-primary text-primary-foreground shadow-lg"
-  89 |                 : "text-muted-foreground hover:text-foreground hover:bg-secondary",
-
-Unterminated string constant
-
-Import trace:
-  Server Component:
-    ./components/sidebar.tsx
-    ./app/page.tsx
-[00:44:16.643] Server  LOG     ✓ Compiled in 40ms
-[00:44:30.636] Server  LOG     ✓ Compiled in 42ms
-[00:44:33.635] Server  LOG     ✓ Compiled in 44ms
-[00:44:36.060] Server  LOG     ✓ Compiled in 28ms
-[00:44:38.492] Server  LOG     ✓ Compiled in 30ms
-[00:45:25.480] Server  LOG     ✓ Compiled in 40ms
-[00:45:29.629] Server  LOG     ✓ Compiled in 39ms
-[00:45:34.095] Server  LOG     ✓ Compiled in 34ms
-[00:45:36.074] Server  LOG     ✓ Compiled in 25ms
-[00:45:39.379] Server  LOG     ✓ Compiled in 41ms
-[00:45:42.258] Server  LOG     ✓ Compiled in 20ms
-[00:45:44.097] Server  LOG     ✓ Compiled in 51ms
-[00:45:46.447] Server  LOG     ✓ Compiled in 10ms
-[00:45:49.804] Server  LOG     ✓ Compiled in 29ms
-[00:45:53.582] Server  LOG     ✓ Compiled in 24ms
-[00:45:58.396] Server  LOG     ✓ Compiled in 12ms
-[00:46:00.346] Server  LOG     ✓ Compiled in 11ms
-[00:46:01.764] Server  LOG     ✓ Compiled in 8ms
-[00:46:08.476] Server  LOG     ✓ Compiled in 64ms
-[00:46:12.339] Server  LOG     ✓ Compiled in 11ms
-[00:46:14.319] Server  LOG     ✓ Compiled in 46ms
-[00:46:44.320] Server  LOG     ✓ Compiled in 116ms
-[00:50:12.360] Server  LOG     ✓ Compiled in 462ms
-[00:50:12.461] Browser ERROR   ./components/traffic-chart.tsx:29:10
-Parsing ecmascript source code failed
-  27 |
-  28 | export function TrafficChart() {
-> 29 |   return (
-     |          ^
-> 30 |   
-     | ^^
-> 31 |   )
-     | ^^^^
-  32 | }
-  33 |
-
-Parenthesized expression cannot be empty
-
-Import trace:
-  Server Component:
-    ./components/traffic-chart.tsx
-    ./app/page.tsx
-[00:56:57.641] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className="bg-background text-foreground"
--                           className="bg-background text-foreground vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[01:33:05.869] Server  ERROR   ⨯ ReferenceError: isPos is not defined
-[01:33:05.870] Server  ERROR   ⨯ ReferenceError: isPos is not defined
-[01:33:05.870] Server  ERROR   ⨯ ReferenceError: isPos is not defined
-[01:33:05.871] Server  ERROR   ⨯ ReferenceError: isPos is not defined
-[01:33:05.996] Browser ERROR   uncaughtError: ReferenceError: isPos is not defined
-[01:33:07.423] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className={"bg-background "}
--                           className="bg-background vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[01:33:08.087] Browser ERROR   ./components/MetricCard.tsx:35:13
-Parsing ecmascript source code failed
-  33 |       <div>
-  34 |         <div>
-> 35 | {isPositive?}
-     |             ^
-  36 |
-  37 |         </div>
-  38 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:09.565] Browser ERROR   ./components/MetricCard.tsx:35:14
-Parsing ecmascript source code failed
-  33 |       <div>
-  34 |         <div>
-> 35 | {isPositive? }
-     |              ^
-  36 |
-  37 |         </div>
-  38 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:15.197] Browser ERROR   ./components/MetricCard.tsx:35:16
-Parsing ecmascript source code failed
-  33 |       <div>
-  34 |         <div>
-> 35 | {isPositive? ()}
-     |                ^
-  36 |
-  37 |         </div>
-  38 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:16.320] Browser ERROR   ./components/MetricCard.tsx:37:2
-Parsing ecmascript source code failed
-  35 | {isPositive? (
-  36 |     
-> 37 | )}
-     |  ^
-  38 |
-  39 |         </div>
-  40 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:19.186] Browser ERROR   ./components/MetricCard.tsx:37:2
-Parsing ecmascript source code failed
-  35 | {isPositive? (
-  36 |     Tre
-> 37 | )}
-     |  ^
-  38 |
-  39 |         </div>
-  40 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:23.161] Browser ERROR   ./components/MetricCard.tsx:37:2
-Parsing ecmascript source code failed
-  35 | {isPositive? (
-  36 |     Tredin
-> 37 | )}
-     |  ^
-  38 |
-  39 |         </div>
-  40 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:26.034] Browser ERROR   ./components/MetricCard.tsx:37:2
-Parsing ecmascript source code failed
-  35 | {isPositive? (
-  36 |     TrendingUp
-> 37 | )}
-     |  ^
-  38 |
-  39 |         </div>
-  40 |         <span></span>
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:27.833] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | )}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:37.595] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) }
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:39.676] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) :}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:42.263] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : tre}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:44.883] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : }
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:49.185] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : ()}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:54.154] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : ( Tre)}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:33:55.794] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : ( Trendin)}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:34:00.690] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : ( TrendinhDown)}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:34:02.565] Browser ERROR   ./components/MetricCard.tsx:36:16
-Parsing ecmascript source code failed
-  34 |         <div>
-  35 | {isPositive? (
-> 36 |     TrendingUp className="w-4 h-4 text-green-500" />
-     |                ^^^^^^^^^
-  37 | ) : ( TrendinhDown className="w-4 h-4 text-red-500" />)}
-  38 |
-  39 |         </div>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:34:11.746] Browser ERROR   ./components/MetricCard.tsx:37:20
-Parsing ecmascript source code failed
-  35 | {isPositive? (
-  36 |     <TrendingUp className="w-4 h-4 text-green-500" />
-> 37 | ) : ( TrendinhDown className="w-4 h-4 text-red-500" />)}
-     |                    ^^^^^^^^^
-  38 |
-  39 |         </div>
-  40 |         <span></span>
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:34:15.947] Server  LOG     ✓ Compiled in 77ms
-[01:34:15.994] Server  ERROR   ⨯ ReferenceError: TrendinhDown is not defined
-[01:34:16.204] Browser ERROR   uncaughtError: ReferenceError: TrendinhDown is not defined
-[01:34:16.204] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​MetricCard' cannot have a negative time stamp.
-[01:34:35.269] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className={"bg-background "}
--                           className="bg-background vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[01:35:31.638] Server  ERROR   Only plain objects can be passed to Client Components from Server Components. Math objects are not supported.
-  <span children={Math}>
-                 ^^^^^^
-[01:35:31.776] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
-[01:35:34.123] Server  ERROR   ⨯ Error: Functions are not valid as a child of Client Components. This may happen if you return abs instead of <abs /> from render. Or maybe you meant to call this function rather than return it.
-  <span children={function abs}>
-                 ^^^^^^^^^^^^^^
-[01:35:34.290] Server  ERROR   ⨯ Error: Functions are not valid as a child of Client Components. This may happen if you return abs instead of <abs /> from render. Or maybe you meant to call this function rather than return it.
-  <span children={function abs}>
-                 ^^^^^^^^^^^^^^
-[01:35:34.455] Server  ERROR   ⨯ Error: Functions are not valid as a child of Client Components. This may happen if you return abs instead of <abs /> from render. Or maybe you meant to call this function rather than return it.
-  <span children={function abs}>
-                 ^^^^^^^^^^^^^^
-[01:35:34.586] Server  ERROR   ⨯ Error: Functions are not valid as a child of Client Components. This may happen if you return abs instead of <abs /> from render. Or maybe you meant to call this function rather than return it.
-  <span children={function abs}>
-                 ^^^^^^^^^^^^^^
-[01:35:35.043] Browser ERROR   uncaughtError: Error: Functions are not valid as a child of Client Components. This may happen if you return abs instead of <abs /> from render. Or maybe you meant to call this function rather than return it.
-  <span children={function abs}>
-                 ^^^^^^^^^^^^^^
-[01:35:35.950] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{}}</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:35:38.958] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change}}</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:35:45.912] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change}%}</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:23.891] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change}}</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:26.306] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change}}%</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:38.631] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change}%</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:41.101] Browser ERROR   ./components/MetricCard.tsx:41:24
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs{change%</span>
-     |                        ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got '{'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:43.731] Browser ERROR   ./components/MetricCard.tsx:41:31
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abschange%</span>
-     |                               ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:43.731] Browser ERROR   ./components/MetricCard.tsx:41:32
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abschange%</span>
-     |                                ^^^^^^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:45.466] Browser ERROR   ./components/MetricCard.tsx:41:25
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs change%</span>
-     |                         ^^^^^^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expected '</', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:52.897] Browser ERROR   ./components/MetricCard.tsx:41:34
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs (change)%</span>
-     |                                  ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:52.897] Browser ERROR   ./components/MetricCard.tsx:41:35
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs (change)%</span>
-     |                                   ^^^^^^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:56.992] Browser ERROR   ./components/MetricCard.tsx:41:33
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs(change)%</span>
-     |                                 ^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:36:56.992] Browser ERROR   ./components/MetricCard.tsx:41:34
-Parsing ecmascript source code failed
-  39 |           )}
-  40 |         </div>
-> 41 |         <span>{Math.abs(change)%</span>
-     |                                  ^^^^^^
-  42 |       </div>
-  43 |     </div>
-  44 |   );
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:37:03.632] Server  LOG     ✓ Compiled in 41ms
-[01:38:04.035] Browser ERROR   ./components/MetricCard.tsx:43:14
-Parsing ecmascript source code failed
-  41 |         <span>{Math.abs(change)}%</span>
-  42 |       </div>
-> 43 |       <span>{</span>
-     |              ^
-  44 |     </div>
-  45 |   );
-  46 | };
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:38:04.035] Browser ERROR   ./components/MetricCard.tsx:43:15
-Parsing ecmascript source code failed
-  41 |         <span>{Math.abs(change)}%</span>
-  42 |       </div>
-> 43 |       <span>{</span>
-     |               ^^^^^^
-  44 |     </div>
-  45 |   );
-  46 | };
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:38:07.546] Server  ERROR   ⨯ ReferenceError: c is not defined
-[01:38:07.547] Server  ERROR   ⨯ ReferenceError: c is not defined
-[01:38:07.547] Server  ERROR   ⨯ ReferenceError: c is not defined
-[01:38:07.548] Server  ERROR   ⨯ ReferenceError: c is not defined
-[01:38:07.758] Browser ERROR   uncaughtError: ReferenceError: c is not defined
-[01:38:07.758] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​MetricCard' cannot have a negative time stamp.
-[01:38:09.562] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className={"bg-background "}
--                           className="bg-background vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[01:41:49.938] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. text-mutedclassName text-mutedclassname
-[01:41:51.994] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. tclassName tclassname
-[01:45:22.308] Browser ERROR   ./components/MetricCard.tsx:47:27
-Parsing ecmascript source code failed
-  45 |         <span>{Math.abs(change)}%</span>
-  46 |        </div> 
-> 47 |       <span>{changeLabel}</span>
-     |                           ^^^^^^
-  48 |     </div>
-  49 |   );
-  50 | };
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:01.212] Browser ERROR   ./components/MetricCard.tsx:38:23
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className=>
-     |                       ^^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '=>'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:03.809] Browser ERROR   ./components/MetricCard.tsx:39:23
-Parsing ecmascript source code failed
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-  38 |         <div className={}>
-> 39 |           {isPositive ? (
-     |                       ^
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-  42 |             <TrendingDown className="w-4 h-4 text-red-500" />
-
-An object member cannot be declared optional
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:03.809] Browser ERROR   ./components/MetricCard.tsx:38:26
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={}>
-     |                          ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:05.401] Server  LOG     ✓ Compiled in 52ms
-[01:47:49.188] Browser ERROR   ./components/MetricCard.tsx:38:75
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${}`}>
-     |                                                                           ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:54.026] Browser ERROR   ./components/MetricCard.tsx:38:88
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? }`}>
-     |                                                                                        ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:47:56.656] Browser ERROR   ./components/MetricCard.tsx:38:94
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? "text"}`}>
-     |                                                                                              ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:48:03.810] Browser ERROR   ./components/MetricCard.tsx:38:100
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? "text-chart"}`}>
-     |                                                                                                    ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:48:05.561] Browser ERROR   ./components/MetricCard.tsx:38:102
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? "text-chart-4"}`}>
-     |                                                                                                      ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:48:09.014] Browser ERROR   ./components/MetricCard.tsx:38:103
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? "text-chart-4" }`}>
-     |                                                                                                       ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:48:10.833] Browser ERROR   ./components/MetricCard.tsx:38:105
-Parsing ecmascript source code failed
-  36 |
-  37 |       <div className=" flex items-center gap-2 pt-2 border-t border-border">
-> 38 |         <div className={` flex items-center gap-1 text-sm font-semibold ${isPositive ? "text-chart-4" : }`}>
-     |                                                                                                         ^
-  39 |           {isPositive ? (
-  40 |             <TrendingUp className="w-4 h-4 text-green-500" />
-  41 |           ) : (
-
-Expected '</', got '}'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:53:37.379] Browser ERROR   ./components/MetricCard.tsx:50:8
-Parsing ecmascript source code failed
-  48 |         <span>{Math.abs(change)}%</span>
-  49 |        </div>
-> 50 |       n>
-     |        ^
-  51 |     </div>
-  52 |   );
-  53 | };
-
-Unexpected token. Did you mean `{'>'}` or `&gt;`?
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[01:53:39.401] Server  LOG     ✓ Compiled in 56ms
-[01:57:01.540] Browser ERROR   ./app/page.tsx:11:1
-Export MetricCard doesn't exist in target module
-   9 | } from "lucide-react";
-  10 | import React, { Activity } from "react";
-> 11 | import { MetricCard } from "@/components/MetricCard";
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  12 | import { TrafficChart } from "@/components/traffic-chart";
-  13 | import { ActivityTable } from "@/components/activity-table";
-  14 | import { Sidebar } from "@/components/sidebar";
-
-The export MetricCard was not found in module [project]/components/MetricCard.tsx [app-rsc] (ecmascript).
-The module has no exports at all.
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-[01:57:07.232] Server  LOG     ✓ Compiled in 230ms
-[01:59:50.119] Server  LOG     ✓ Compiled in 216ms
-[02:00:25.451] Server  LOG     ✓ Compiled in 123ms
-[02:00:33.155] Server  ERROR   ⨯ ReferenceError: imp is not defined
-[02:00:33.486] Server  ERROR   ⨯ ReferenceError: imp is not defined
-[02:00:34.239] Server  ERROR   ⨯ ReferenceError: imp is not defined
-[02:00:34.623] Server  ERROR   ⨯ ReferenceError: imp is not defined
-[02:00:35.088] Browser ERROR   uncaughtError: ReferenceError: imp is not defined
-[02:00:35.291] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected 'from', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:00:35.291] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected 'from', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:00:37.181] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import 
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected 'from', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:00:43.482] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import glo
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected ',', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:00:48.592] Browser ERROR   ./components/MetricCard.tsx:3:8
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import .
-> 3 | import { ReactNode } from "react";
-    |        ^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Unexpected token `{`. Expected meta
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:01:03.783] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import Ə
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected ',', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:01:04.911] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import 
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected 'from', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:01:07.202] Browser ERROR   ./components/MetricCard.tsx:3:1
-Parsing ecmascript source code failed
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-  2 | import Ə
-> 3 | import { ReactNode } from "react";
-    | ^^^^^^
-  4 |
-  5 | interface MetricCardProps {
-  6 |   title: string;
-
-Expected ',', got 'import'
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-[02:01:09.264] Server  ERROR   ⨯ ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve ''
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import ""
-    | ^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:01:09.401] Browser ERROR   ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve ''
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import ""
-    | ^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:01:10.576] Server  ERROR   ⨯ ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./"
-    | ^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:01:10.708] Browser ERROR   ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./"
-    | ^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:01:16.506] Server  ERROR   ⨯ ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './g'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./g"
-    | ^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:01:16.641] Browser ERROR   ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './g'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./g"
-    | ^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:01:17.852] Server  ERROR   ⨯ ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './glo'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./glo"
-    | ^^^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:01:17.985] Browser ERROR   ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './glo'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./glo"
-    | ^^^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:01:19.014] Server  ERROR   ⨯ ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './globals.css'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./globals.css";
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[02:01:19.149] Browser ERROR   ./components/MetricCard.tsx:2:1
-Module not found: Can't resolve './globals.css'
-  1 | import { TrendingUp, TrendingDown } from "lucide-react";
-> 2 | import "./globals.css";
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  3 | import { ReactNode } from "react";
-  4 |
-  5 | interface MetricCardProps {
-
-Import trace:
-  Server Component:
-    ./components/MetricCard.tsx
-    ./app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-[02:01:28.539] Server  LOG     ✓ Compiled in 87ms
-[02:01:29.668] Server  LOG     ✓ Compiled in 30ms
-[02:01:30.274] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="az">
-                          <body
-+                           className={"bg-background "}
--                           className="bg-background vsc-initialized"
-                            style={{background:"hsl(var(--...",color:"hsl(var(--..."}}
-                          >
-                  ...
-
-[02:02:41.334] Server  LOG     ✓ Compiled in 112ms
-[02:28:45.921] Server  LOG     ✓ Compiled in 148ms
-[02:28:46.123] Browser ERROR   React instrumentation encountered an error: %o {}
-[02:28:59.348] Server  LOG     ✓ Compiled in 343ms
-[02:29:32.680] Server  LOG     ✓ Compiled in 92ms
-[02:29:46.382] Server  LOG     ✓ Compiled in 69ms
-[02:34:31.314] Server  LOG     ✓ Compiled in 130ms
-[02:37:13.943] Server  LOG     ✓ Compiled in 180ms
-[02:37:17.927] Server  LOG     ✓ Compiled in 268ms
-[02:37:23.453] Server  LOG     ✓ Compiled in 271ms
-[02:39:13.721] Server  ERROR   ⨯ ReferenceError: isOpen is not defined
-[02:39:13.918] Browser ERROR   uncaughtError: ReferenceError: isOpen is not defined
-[02:39:25.010] Browser ERROR   ./app/page.tsx:55:40
-Parsing ecmascript source code failed
-  53 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  54 |                 >
-> 55 |                   {isOpen ? <xclassName="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                        ^
-  56 |                 </button>
-  57 |         </header>
-  58 |
-
-Expected '</', got '='
-[02:39:28.389] Browser ERROR   ./app/page.tsx:55:40
-Parsing ecmascript source code failed
-  53 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  54 |                 >
-> 55 |                   {isOpen ? < className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                        ^
-  56 |                 </button>
-  57 |         </header>
-  58 |
-
-Expected '</', got '='
-[02:39:33.781] Browser ERROR   ./app/page.tsx:55:41
-Parsing ecmascript source code failed
-  53 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  54 |                 >
-> 55 |                   {isOpen ? <XxclassName="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                         ^
-  56 |                 </button>
-  57 |         </header>
-  58 |
-
-Expected '</', got '='
-[02:39:35.337] Browser ERROR   ./app/page.tsx:55:40
-Parsing ecmascript source code failed
-  53 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  54 |                 >
-> 55 |                   {isOpen ? <XclassName="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                        ^
-  56 |                 </button>
-  57 |         </header>
-  58 |
-
-Expected '</', got '='
-[02:39:37.464] Browser ERROR   ./app/page.tsx:55:40
-Parsing ecmascript source code failed
-  53 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  54 |                 >
-> 55 |                   {isOpen ? <XclassName="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                        ^
-  56 |                 </button>
-  57 |         </header>
-  58 |
-
-Expected '</', got '='
-[02:39:38.313] Server  ERROR   ⨯ ReferenceError: isOpen is not defined
-[02:39:39.319] Browser ERROR   uncaughtError: ReferenceError: isOpen is not defined
-[02:39:39.319] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:39:45.636] Server  ERROR   ⨯ ReferenceError: isOpen is not defined
-[02:39:46.749] Browser ERROR   uncaughtError: ReferenceError: isOpen is not defined
-[02:39:46.853] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:39:49.133] Server  ERROR   ⨯ ReferenceError: isOpen is not defined
-[02:39:50.046] Browser ERROR   uncaughtError: ReferenceError: isOpen is not defined
-[02:39:50.223] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:40:06.884] Server  LOG     ✓ Compiled in 49ms
-[02:40:07.090] Server  ERROR   ⨯ ReferenceError: isOpen is not defined
-[02:40:07.983] Browser ERROR   uncaughtError: ReferenceError: isOpen is not defined
-[02:40:07.983] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:40:08.101] Server  ERROR   ⨯ ReferenceError: useState is not defined
-[02:40:09.220] Browser ERROR   uncaughtError: ReferenceError: useState is not defined
-[02:40:09.220] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:40:11.782] Server  ERROR   ⨯ ReferenceError: useStatr is not defined
-[02:40:12.667] Browser ERROR   uncaughtError: ReferenceError: useStatr is not defined
-[02:40:12.774] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:40:15.201] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:40:22.455] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:40:24.942] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:41:01.055] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:41:13.260] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:41:22.672] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:41:34.149] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:23.387] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:25.593] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:32.807] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:46.415] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:48.312] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:42:51.183] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:43:00.180] Server  ERROR   ⨯ ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-
-[02:43:00.434] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:43:01.227] Browser ERROR   uncaughtError: Error: ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-
-[02:43:01.559] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:43:01.559] Browser ERROR   ./app/page.tsx:12:27
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { Activity, useState } from "react";
-     |                           ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:43:14.321] Browser ERROR   ./app/page.tsx:12:17
-Ecmascript file had an error
-  10 |   Zap,
-  11 | } from "lucide-react";
-> 12 | import React, { useState } from "react";
-     |                 ^^^^^^^^
-  13 | import { MetricCard } from "@/components/MetricCard";
-  14 | import { TrafficChart } from "@/components/traffic-chart";
-  15 | import { ActivityTable } from "@/components/activity-table";
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:43:18.576] Server  LOG     ✓ Compiled in 153ms
-[02:43:18.702] Server  ERROR   ⨯ ReferenceError: useState is not defined
-[02:43:19.872] Browser ERROR   uncaughtError: ReferenceError: useState is not defined
-[02:43:19.872] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​Dashboard' cannot have a negative time stamp.
-[02:43:30.798] Browser ERROR   ./app/page.tsx:17:10
-Ecmascript file had an error
-  15 | import { ActivityTable } from "@/components/activity-table";
-  16 | import { Sidebar } from "@/components/sidebar";
-> 17 | import { useState } from "react";
-     |          ^^^^^^^^
-  18 |
-  19 | export default function Dashboard() {
-  20 |   const [isOpen, setIsOpen] = useState(false);
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:45:13.870] Browser ERROR   ./app/page.tsx:19:10
-Ecmascript file had an error
-  17 | import { ActivityTable } from "@/components/activity-table";
-  18 | import { Sidebar } from "@/components/sidebar";
-> 19 | import { useState } from "react";
-     |          ^^^^^^^^
-  20 |
-  21 | export default function Dashboard() {
-  22 |   const [isOpen, setIsOpen] = useState(false);
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:45:16.871] Browser ERROR   ./app/page.tsx:19:10
-Ecmascript file had an error
-  17 | import { ActivityTable } from "@/components/activity-table";
-  18 | import { Sidebar } from "@/components/sidebar";
-> 19 | import { useState } from "react";
-     |          ^^^^^^^^
-  20 |
-  21 | export default function Dashboard() {
-  22 |   const [isOpen, setIsOpen] = useState(false);
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:45:18.792] Browser ERROR   ./app/page.tsx:19:10
-Ecmascript file had an error
-  17 | import { ActivityTable } from "@/components/activity-table";
-  18 | import { Sidebar } from "@/components/sidebar";
-> 19 | import { useState } from "react";
-     |          ^^^^^^^^
-  20 |
-  21 | export default function Dashboard() {
-  22 |   const [isOpen, setIsOpen] = useState(false);
-
-You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-[02:45:21.495] Server  LOG     ✓ Compiled in 1568ms
-[02:45:45.615] Server  LOG     ✓ Compiled in 295ms
-[02:45:52.093] Server  LOG     ✓ Compiled in 54ms
-[02:46:34.934] Server  LOG     ✓ Compiled in 165ms
-[02:47:22.126] Server  LOG     ✓ Compiled in 67ms
-[02:48:07.157] Server  LOG     ✓ Compiled in 62ms
-[02:48:10.370] Server  LOG     ✓ Compiled in 65ms
-[02:48:12.535] Server  LOG     ✓ Compiled in 62ms
-[02:48:14.153] Server  LOG     ✓ Compiled in 87ms
-[02:48:15.349] Server  LOG     ✓ Compiled in 64ms
-[02:48:33.783] Server  LOG     ✓ Compiled in 68ms
-[02:48:36.833] Server  LOG     ✓ Compiled in 69ms
-[02:48:39.080] Server  LOG     ✓ Compiled in 80ms
-[02:48:43.001] Server  LOG     ✓ Compiled in 78ms
-[02:48:45.407] Server  LOG     ✓ Compiled in 34ms
-[02:48:49.849] Server  LOG     ✓ Compiled in 62ms
-[02:48:54.180] Server  LOG     ✓ Compiled in 70ms
-[02:48:57.542] Server  LOG     ✓ Compiled in 64ms
-[02:49:20.405] Server  LOG     ✓ Compiled in 32ms
-[02:49:23.587] Server  LOG     ✓ Compiled in 122ms
-[02:49:28.914] Server  LOG     ✓ Compiled in 58ms
-[02:49:56.583] Server  LOG     ✓ Compiled in 127ms
-[02:49:56.714] Browser ERROR   ./app/page.tsx:63:47
-Parsing ecmascript source code failed
-  61 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  62 |                 >
-> 63 |                   { <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-     |                                               ^
-  64 |                 </button>
-  65 |         </header>
-  66 |
-
-Expected '</', got ':'
-
 Import traces:
   Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[02:50:13.581] Server  LOG     ✓ Compiled in 123ms
-[02:50:13.723] Browser ERROR   ./app/page.tsx:64:18
+[00:13:27.084] Browser ERROR   ./app/auth/store/useAuthStore.ts:55:51
 Parsing ecmascript source code failed
-  62 |                 >
-  63 |                   { <Menu className="w-5 h-5" />
-> 64 |                 </button>
-     |                  ^^^^^^^^
-  65 |         </header>
-  66 |
-  67 |         {/* Page content */}
+  53 | loginWithGoogle: async () => {
+  54 |   const provider = new GoogleAuthProvider();
+> 55 |    alert: { message: "Logged in with Google", type: "success" }
+     |                                                   ^
+  56 |       provider.setCustomParameters({
+  57 |     prompt: 'select_account'
+  58 |   });
 
-Unterminated regexp literal
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[02:50:27.016] Server  LOG     ✓ Compiled in 68ms
-[02:50:30.569] Server  LOG     ✓ Compiled in 71ms
-[02:51:06.930] Server  LOG     ✓ Compiled in 76ms
-[02:51:09.831] Server  LOG     ✓ Compiled in 54ms
-[02:51:14.144] Server  LOG     ✓ Compiled in 61ms
-[02:51:20.768] Server  LOG     ✓ Compiled in 61ms
-[02:51:36.591] Server  LOG     ✓ Compiled in 66ms
-[02:51:36.705] Browser ERROR   ./app/page.tsx:63:47
+[00:13:39.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:56:51
 Parsing ecmascript source code failed
-  61 |                   className="fixed top-4 left-4 z-50 lg:hidden w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center shadow-lg"
-  62 |                 >
-> 63 |                   { <X className="w-5 h-5" /> :<Menu className="w-5 h-5" />}
-     |                                               ^
-  64 |                 </button>
-  65 |         </header>
-  66 |
+  54 |   const provider = new GoogleAuthProvider();
+  55 |   
+> 56 |    alert: { message: "Logged in with Google", type: "success" }
+     |                                                   ^
+  57 |       provider.setCustomParameters({
+  58 |     prompt: 'select_account'
+  59 |   });
 
-Expected '</', got ':'
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[02:51:52.111] Server  LOG     ✓ Compiled in 357ms
-[02:51:55.984] Server  LOG     ✓ Compiled in 250ms
-[02:52:39.045] Server  LOG     ✓ Compiled in 49ms
-[02:52:44.754] Server  LOG     ✓ Compiled in 64ms
-[02:52:48.861] Server  LOG     ✓ Compiled in 20ms
-[02:53:16.022] Server  LOG     ✓ Compiled in 61ms
-[02:53:20.944] Server  LOG     ✓ Compiled in 66ms
-[02:53:32.835] Server  LOG     ✓ Compiled in 73ms
-[02:53:34.775] Server  LOG     ✓ Compiled in 53ms
-[02:53:44.217] Server  LOG     ✓ Compiled in 87ms
-[02:53:48.628] Server  LOG     ✓ Compiled in 133ms
-[02:53:56.558] Server  LOG     ✓ Compiled in 53ms
-[02:54:34.403] Server  LOG     ✓ Compiled in 75ms
-[02:54:36.958] Server  LOG     ✓ Compiled in 63ms
-[02:55:10.477] Server  LOG     ✓ Compiled in 123ms
-[02:55:36.122] Server  LOG     ✓ Compiled in 111ms
-[02:55:54.462] Server  LOG     ✓ Compiled in 131ms
-[02:55:54.617] Browser ERROR   ./app/page.tsx:40:19
+[00:13:39.084] Browser ERROR   ./app/auth/store/useAuthStore.ts:56:51
 Parsing ecmascript source code failed
-  38 |               <p className="hidden lg:flex text-xs sm:text-sm text-muted-foreground mt-1">
-  39 |                 Welcome to your dashboard.
-> 40 |             </div>
+  54 |   const provider = new GoogleAuthProvider();
+  55 |   
+> 56 |    alert: { message: "Logged in with Google", type: "success" }
+     |                                                   ^
+  57 |       provider.setCustomParameters({
+  58 |     prompt: 'select_account'
+  59 |   });
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:13:44.041] Server  LOG     ✓ Compiled in 82ms
+[00:13:47.965] Server  LOG     ✓ Compiled in 72ms
+[00:13:48.083] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:13:48.084] Browser ERROR   ./app/auth/store/useAuthStore.ts:67:7
+Parsing ecmascript source code failed
+  65 |       },
+  66 |       alert: { message: "Logged in with Google", type: "success" }
+> 67 |       provider.setCustomParameters({
+     |       ^^^^^^^^
+  68 |     prompt: 'select_account'
+  69 |   });
+  70 |     });
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./app/auth/store/useAuthStore.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/auth/store/useAuthStore.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:14:01.277] Server  LOG     ✓ Compiled in 57ms
+[00:16:46.742] Server  LOG     ✓ Compiled in 65ms
+[00:16:54.143] Server  LOG     ✓ Compiled in 19ms
+[00:18:27.202] Server  LOG     ✓ Compiled in 74ms
+[00:18:27.686] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:18:27.925] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:18:28.435] Browser ERROR   uncaughtError: ReferenceError: user is not defined
+[00:18:32.036] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:32.036] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:32.037] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:32.384] Server  ERROR   ⨯ ReferenceError: useAuthStore is not defined
+[00:18:32.391] Server  LOG     ✓ Compiled in 24ms
+[00:18:32.574] Server  ERROR   ⨯ ReferenceError: useAuthStore is not defined
+[00:18:33.003] Browser ERROR   uncaughtError: ReferenceError: useAuthStore is not defined
+[00:18:33.083] Browser ERROR   uncaughtError: ReferenceError: useAuthStore is not defined
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:34.686] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:34.833] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:35.039] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useCallback')
+[00:18:35.049] Server  LOG     ✓ Compiled in 113ms
+[00:18:35.249] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useCallback')
+[00:18:35.707] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:36.084] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:37.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:37.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:37.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:37.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:37.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:37.170] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:37.335] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:37.594] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useCallback')
+[00:18:37.600] Server  LOG     ✓ Compiled in 12ms
+[00:18:37.844] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'useCallback')
+[00:18:38.347] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:39.086] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[00:18:47.547] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:47.547] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:47.547] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:47.547] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:47.548] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:18:47.548] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:18:47.604] Server  LOG     ✓ Compiled in 66ms
+[00:18:56.030] Server  LOG     ✓ Compiled in 98ms
+[00:19:10.491] Server  LOG     ✓ Compiled in 17ms
+[00:19:10.594] Browser ERROR   ./components/activity-table.tsx:30:26
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description:  signed up",
+     |                          ^^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:11.082] Browser ERROR   ./components/activity-table.tsx:30:26
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description:  signed up",
+     |                          ^^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:15.012] Server  LOG     ✓ Compiled in 72ms
+[00:19:15.113] Browser ERROR   ./components/activity-table.tsx:30:18
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description: ; signed up",
+     |                  ^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:16.083] Browser ERROR   ./components/activity-table.tsx:30:18
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description: ; signed up",
+     |                  ^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:16.238] Server  LOG     ✓ Compiled in 49ms
+[00:19:16.339] Browser ERROR   ./components/activity-table.tsx:30:26
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description:  signed up",
+     |                          ^^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:17.082] Browser ERROR   ./components/activity-table.tsx:30:26
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description:  signed up",
+     |                          ^^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
+
+Expected ',', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:20.623] Server  LOG     ✓ Compiled in 16ms
+[00:19:20.725] Browser ERROR   ./components/activity-table.tsx:30:19
+Parsing ecmascript source code failed
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description: ${} signed up",
      |                   ^
-> 41 |
-     | ^
-> 42 |             <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
-     | ^^^^^^^^^^^^^
-  43 |               <button className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-secondary hover:bg-secondary/80 text-sm">
-  44 |                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-  45 |                 <span className="hidden sm:inline">This Month</span>
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
 
-Expected '</', got 'jsx text'
+Expected ',', got '{'
 
 Import traces:
   Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[02:56:05.950] Server  LOG     ✓ Compiled in 54ms
-[02:57:40.091] Server  LOG     ✓ Compiled in 19ms
-[02:57:43.549] Server  LOG     ✓ Compiled in 16ms
-[02:57:45.469] Server  LOG     ✓ Compiled in 63ms
-[02:57:48.777] Server  LOG     ✓ Compiled in 81ms
-[02:57:51.485] Server  LOG     ✓ Compiled in 84ms
-[02:57:58.086] Server  LOG     ✓ Compiled in 23ms
-[02:58:29.795] Server  LOG     ✓ Compiled in 73ms
-[02:58:33.315] Server  LOG     ✓ Compiled in 25ms
-[02:58:50.939] Server  LOG     ✓ Compiled in 78ms
-[02:59:08.589] Server  LOG     ✓ Compiled in 156ms
-[02:59:13.243] Server  LOG     ✓ Compiled in 76ms
-[02:59:15.819] Server  LOG     ✓ Compiled in 21ms
-[02:59:30.465] Server  LOG     ✓ Compiled in 54ms
-[02:59:50.506] Server  LOG     ✓ Compiled in 67ms
-[02:59:54.612] Server  LOG     ✓ Compiled in 49ms
-[03:00:30.809] Server  LOG     ✓ Compiled in 73ms
-[03:00:40.123] Server  LOG     ✓ Compiled in 84ms
-[03:00:45.688] Server  LOG     ✓ Compiled in 118ms
-[03:00:49.309] Server  LOG     ✓ Compiled in 55ms
-[03:00:54.486] Server  LOG     ✓ Compiled in 37ms
-[03:01:34.227] Server  LOG     ✓ Compiled in 103ms
-[03:01:41.378] Server  LOG     ✓ Compiled in 18ms
-[03:01:49.670] Server  LOG     ✓ Compiled in 64ms
-[03:01:54.016] Server  LOG     ✓ Compiled in 79ms
-[03:02:02.190] Server  LOG     ✓ Compiled in 19ms
-[03:02:08.090] Server  LOG     ✓ Compiled in 42ms
-[03:02:11.049] Server  LOG     ✓ Compiled in 68ms
-[03:02:19.787] Server  LOG     ✓ Compiled in 62ms
-[03:02:57.594] Server  LOG     ✓ Compiled in 79ms
-[03:03:09.899] Server  LOG     ✓ Compiled in 22ms
-[03:03:15.161] Server  LOG     ✓ Compiled in 46ms
-[03:03:53.672] Server  LOG     ✓ Compiled in 61ms
-[03:04:06.275] Server  LOG     ✓ Compiled in 59ms
-[03:04:16.281] Server  LOG     ✓ Compiled in 65ms
-[03:04:17.525] Server  LOG     ✓ Compiled in 69ms
-[03:04:19.872] Server  LOG     ✓ Compiled in 26ms
-[03:04:24.905] Server  LOG     ✓ Compiled in 18ms
-[03:04:40.947] Server  LOG     ✓ Compiled in 79ms
-[03:04:44.943] Server  LOG     ✓ Compiled in 94ms
-[03:04:50.176] Server  LOG     ✓ Compiled in 66ms
-[03:04:51.559] Server  LOG     ✓ Compiled in 75ms
-[03:04:53.418] Server  LOG     ✓ Compiled in 53ms
-[03:04:55.262] Server  LOG     ✓ Compiled in 46ms
-[03:04:57.007] Server  LOG     ✓ Compiled in 62ms
-[03:04:58.909] Server  LOG     ✓ Compiled in 60ms
-[03:05:03.576] Server  LOG     ✓ Compiled in 56ms
-[03:05:04.925] Server  LOG     ✓ Compiled in 66ms
-[03:05:11.207] Server  LOG     ✓ Compiled in 75ms
-[03:05:13.531] Server  LOG     ✓ Compiled in 22ms
-[03:05:15.244] Server  LOG     ✓ Compiled in 36ms
-[03:05:16.513] Server  LOG     ✓ Compiled in 55ms
-[03:05:22.891] Server  LOG     ✓ Compiled in 56ms
-[03:05:25.122] Server  LOG     ✓ Compiled in 17ms
-[03:05:27.283] Server  LOG     ✓ Compiled in 58ms
-[03:05:40.782] Server  LOG     ✓ Compiled in 83ms
-[03:05:50.971] Server  LOG     ✓ Compiled in 71ms
-[03:05:55.692] Server  LOG     ✓ Compiled in 88ms
-[03:05:55.830] Browser ERROR   ./app/page.tsx:74:17
+[00:19:21.082] Browser ERROR   ./components/activity-table.tsx:30:19
 Parsing ecmascript source code failed
-  72 |
-  73 |             {/* Mobile Menu Button */}
-> 74 |           </div>
-     |                 ^
-> 75 |         </header>
-     | ^^^^^^^^^
-  76 |
-  77 |         {/* Page content */}
-  78 |         <div className="flex-1 overflow-y-auto p-3 sm:p-4 lg:p-6">
+  28 |     type: "user",
+  29 |     title: "New user registered",
+> 30 |     description: ${} signed up",
+     |                   ^
+  31 |     timestamp: "2 min ago",
+  32 |   },
+  33 |   {
 
-Expected '</', got 'jsx text'
+Expected ',', got '{'
 
 Import traces:
   Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[03:06:04.665] Server  LOG     ✓ Compiled in 211ms
-[03:06:04.800] Browser ERROR   ./app/page.tsx:62:13
+[00:19:24.545] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:19:24.779] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:19:25.028] Browser ERROR   uncaughtError: ReferenceError: user is not defined
+[00:19:26.084] Browser ERROR   uncaughtError: ReferenceError: user is not defined
+[00:19:58.206] Server  LOG     ✓ Compiled in 78ms
+[00:19:58.308] Browser ERROR   ./components/activity-table.tsx:94:5
 Parsing ecmascript source code failed
-  60 |             <
-  61 |      
-> 62 |             </div>
-     |             ^
-  63 |
-  64 |             {/* Mobile Menu Button */}
-  65 |           </div>
+  92 |
+  93 | export function ActivityTable() {
+> 94 |   l user = useAuthStore((state) => state.registeredUser);
+     |     ^^^^
+  95 |   const sortedActivities = useMemo(() => {
+  96 |     return [...activities];
+  97 |   }, []);
 
-Expression expected
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[03:06:04.800] Browser ERROR   ./app/page.tsx:62:14
+[00:19:59.083] Browser ERROR   ./components/activity-table.tsx:94:5
 Parsing ecmascript source code failed
-  60 |             <
-  61 |      
-> 62 |             </div>
-     |              ^^^^^
-  63 |
-  64 |             {/* Mobile Menu Button */}
-  65 |           </div>
+  92 |
+  93 | export function ActivityTable() {
+> 94 |   l user = useAuthStore((state) => state.registeredUser);
+     |     ^^^^
+  95 |   const sortedActivities = useMemo(() => {
+  96 |     return [...activities];
+  97 |   }, []);
 
-Unterminated regexp literal
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
+    ./components/activity-table.tsx [Client Component Browser]
     ./app/page.tsx [Client Component Browser]
     ./app/page.tsx [Server Component]
 
   Client Component SSR:
+    ./components/activity-table.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
-[03:06:11.119] Server  LOG     ✓ Compiled in 251ms
-[03:06:14.072] Server  LOG     ✓ Compiled in 321ms
-[03:06:29.160] Server  LOG     ✓ Compiled in 77ms
-[03:06:35.373] Server  LOG     ✓ Compiled in 84ms
-[03:06:37.527] Server  LOG     ✓ Compiled in 86ms
-[03:07:00.168] Server  LOG     ✓ Compiled in 89ms
-[03:07:03.805] Server  LOG     ✓ Compiled in 62ms
-[03:07:05.450] Server  LOG     ✓ Compiled in 73ms
-[03:07:25.013] Server  LOG     ✓ Compiled in 259ms
-[03:07:28.590] Server  LOG     ✓ Compiled in 294ms
-[03:07:36.106] Server  LOG     ✓ Compiled in 70ms
-[03:07:51.519] Server  LOG     ✓ Compiled in 61ms
-[03:08:00.894] Server  LOG     ✓ Compiled in 83ms
-[03:08:03.935] Server  LOG     ✓ Compiled in 62ms
-[03:08:12.091] Server  LOG     ✓ Compiled in 62ms
-[03:08:13.389] Server  LOG     ✓ Compiled in 60ms
-[03:08:19.130] Server  LOG     ✓ Compiled in 21ms
-[03:08:22.558] Server  LOG     ✓ Compiled in 76ms
-[03:08:28.314] Server  LOG     ✓ Compiled in 71ms
-[03:08:35.433] Server  LOG     ✓ Compiled in 96ms
-[03:08:39.442] Server  LOG     ✓ Compiled in 115ms
-[03:08:43.004] Server  LOG     ✓ Compiled in 125ms
-[03:09:44.472] Server  LOG     ✓ Compiled in 96ms
-[03:10:23.525] Server  LOG     ✓ Compiled in 91ms
-[03:10:24.964] Server  LOG     ✓ Compiled in 67ms
-[03:10:28.609] Server  LOG     ✓ Compiled in 66ms
-[03:10:33.434] Server  LOG     ✓ Compiled in 136ms
-[03:10:39.735] Server  LOG     ✓ Compiled in 47ms
-[03:10:43.674] Server  LOG     ✓ Compiled in 67ms
-[03:10:44.936] Server  LOG     ✓ Compiled in 56ms
-[03:10:58.458] Server  LOG     ✓ Compiled in 127ms
-[03:11:02.460] Server  LOG     ✓ Compiled in 121ms
-[03:11:05.674] Server  LOG     ✓ Compiled in 73ms
-[03:11:08.010] Server  LOG     ✓ Compiled in 23ms
-[03:11:10.345] Server  LOG     ✓ Compiled in 81ms
-[03:11:11.837] Server  LOG     ✓ Compiled in 19ms
-[03:11:16.435] Server  LOG     ✓ Compiled in 56ms
-[03:11:22.145] Server  LOG     ✓ Compiled in 22ms
-[03:11:27.191] Server  LOG     ✓ Compiled in 80ms
-[03:11:29.006] Server  LOG     ✓ Compiled in 31ms
-[03:11:30.514] Server  LOG     ✓ Compiled in 73ms
-[03:11:34.358] Server  LOG     ✓ Compiled in 75ms
-[03:11:36.382] Server  LOG     ✓ Compiled in 64ms
-[03:11:38.020] Server  LOG     ✓ Compiled in 102ms
-[03:11:57.636] Server  LOG     ✓ Compiled in 77ms
-[03:11:58.898] Server  LOG     ✓ Compiled in 124ms
-[03:12:03.354] Server  LOG     ✓ Compiled in 65ms
-[03:12:14.501] Server  LOG     ✓ Compiled in 68ms
-[03:12:19.107] Server  LOG     ✓ Compiled in 63ms
-[03:12:22.530] Server  LOG     ✓ Compiled in 18ms
-[03:12:27.275] Server  LOG     ✓ Compiled in 59ms
-[03:12:36.026] Server  LOG     ✓ Compiled in 75ms
-[03:12:50.481] Server  LOG     ✓ Compiled in 65ms
-[03:12:54.063] Server  LOG     ✓ Compiled in 85ms
-[03:12:58.145] Server  LOG     ✓ Compiled in 87ms
-[03:13:15.505] Server  LOG     ✓ Compiled in 70ms
-[03:13:21.335] Server  LOG     ✓ Compiled in 84ms
-[03:35:10.048] Server  LOG     ✓ Compiled in 18ms
-[03:35:13.805] Server  LOG     ✓ Compiled in 20ms
-[03:36:17.203] Server  LOG     ✓ Compiled in 16ms
-[03:36:18.503] Server  LOG     ✓ Compiled in 14ms
-[03:36:19.955] Server  LOG     ✓ Compiled in 35ms
-[03:36:23.001] Server  LOG     ✓ Compiled in 14ms
-[03:36:25.112] Server  LOG     ✓ Compiled in 20ms
-[03:36:26.460] Server  LOG     ✓ Compiled in 26ms
-[03:36:27.715] Server  LOG     ✓ Compiled in 31ms
-[03:36:33.774] Server  LOG     ✓ Compiled in 37ms
-[03:38:31.695] Server  LOG     ✓ Compiled in 34ms
-[03:38:37.568] Server  LOG     ✓ Compiled in 52ms
-[03:39:54.179] Server  LOG     ✓ Compiled in 107ms
-[03:40:01.913] Server  LOG     ✓ Compiled in 56ms
-[03:40:10.847] Server  LOG     ✓ Compiled in 37ms
-[03:40:14.295] Server  LOG     ✓ Compiled in 36ms
-[03:42:04.290] Server  LOG     ✓ Compiled in 19ms
-[03:42:08.188] Server  LOG     ✓ Compiled in 75ms
-[03:42:08.290] Browser ERROR   ./components/sidebar.tsx:50:20
-Parsing ecmascript source code failed
-  48 |         )}
-  49 |       
-> 50 |         {/* Logo */}
-     |                    ^
-  51 |         <div className="px-6 py-6 border-b border-border ">
-  52 |           <div className="flex items-center gap-3">
-  53 |             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-
-Expected '</', got '}'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:42:14.534] Browser ERROR   ./components/sidebar.tsx:50:20
-Parsing ecmascript source code failed
-  48 |         )}
-  49 |       
-> 50 |         {/* Logo */}
-     |                    ^
-  51 |         <div className="px-6 py-6 border-b border-border ">,
-  52 |           <div className="flex items-center gap-3">
-  53 |             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-
-Expected '</', got '}'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:42:16.011] Browser ERROR   ./components/sidebar.tsx:50:20
-Parsing ecmascript source code failed
-  48 |         )}
-  49 |       
-> 50 |         {/* Logo */}
-     |                    ^
-  51 |         <div className="px-6 py-6 border-b border-border ">
-  52 |           <div className="flex items-center gap-3">
-  53 |             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-
-Expected '</', got '}'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:42:23.382] Server  LOG     ✓ Compiled in 44ms
-[03:44:40.766] Server  LOG     ✓ Compiled in 45ms
-[03:45:21.972] Server  LOG     ✓ Compiled in 64ms
-[03:45:22.073] Browser ERROR   ./components/sidebar.tsx:114:15
-Parsing ecmascript source code failed
-  112 |             })}
-  113 |           </div>
-> 114 |         </div>
-      |               ^
-> 115 |
-      | ^
-> 116 |         {/* Logout Button - Fixed at bottom */}
-      | ^^^^^^^^^
-  117 |         <div className="p-4 border-t border-border flex-shrink-0">
-  118 |           <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
-  119 |             <LogOut className="w-5 h-5" />
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:45:29.628] Server  LOG     ✓ Compiled in 29ms
-[03:45:29.729] Browser ERROR   ./components/sidebar.tsx:114:15
-Parsing ecmascript source code failed
-  112 |             })}
-  113 |           </div>
-> 114 |         </div>
-      |               ^
-> 115 |
-      | ^
-> 116 |         {/* Logout Button - Fixed at bottom */}
-      | ^^^^^^^^^
-  117 |         <div className="p-4 border-t border-border flex-shrink-0">
-  118 |           <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
-  119 |             <LogOut className="w-5 h-5" />
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:46:25.636] Server  LOG     ✓ Compiled in 45ms
-[03:46:25.737] Browser ERROR   ./components/sidebar.tsx:114:15
-Parsing ecmascript source code failed
-  112 |             })}
-  113 |           </div>
-> 114 |         </div>
-      |               ^
-> 115 |
-      | ^
-> 116 |         {/* Logout Button - Fixed at bottom */}
-      | ^^^^^^^^^
-  117 |         <div className="p-4 border-t border-border flex-shrink-0">
-  118 |           <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
-  119 |             <LogOut className="w-5 h-5" />
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:46:31.069] Browser ERROR   ./components/sidebar.tsx:114:15
-Parsing ecmascript source code failed
-  112 |             })}
-  113 |           </div>
-> 114 |         </div>
-      |               ^
-> 115 |
-      | ^
-> 116 |         {/* Logout Button - Fixed at bottom */}
-      | ^^^^^^^^^
-  117 |         <div className="p-4 border-t border-border flex-shrink-0">
-  118 |           <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
-  119 |             <LogOut className="w-5 h-5" />
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:47:06.186] Server  LOG     ✓ Compiled in 86ms
-[03:47:06.287] Browser ERROR   ./components/sidebar.tsx:123:15
-Parsing ecmascript source code failed
-  121 |           </button>
-  122 |         </div>
-> 123 |       </aside>
-      |               ^
-> 124 |
-      | ^
-> 125 |       {/* Mobile Overlay */}
-      | ^^^^^^^
-  126 |       {isOpen && (
-  127 |         <div
-  128 |           className="fixed inset-0 bg-black/50 z-30 lg:hidden"
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./components/sidebar.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/sidebar.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[03:47:32.427] Server  LOG     ✓ Compiled in 41ms
-[03:48:14.804] Server  LOG     ✓ Compiled in 45ms
+[00:20:00.730] Server  LOG     ✓ Compiled in 74ms
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:00.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:01.177] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:20:01.410] Server  ERROR   ⨯ ReferenceError: user is not defined
+[00:20:01.640] Browser ERROR   uncaughtError: ReferenceError: user is not defined
+[00:20:02.083] Browser ERROR   uncaughtError: ReferenceError: user is not defined
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./components/activity-table.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:36.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:36.579] Server  LOG     ✓ Compiled in 101ms
+[00:21:38.086] Browser ERROR   uncaughtError: ReferenceError: activities is not defined
+[00:21:38.090] Browser ERROR   uncaughtError: ReferenceError: activities is not defined
+[00:21:44.844] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:44.844] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:45.005] Server  LOG     ✓ Compiled in 21ms
+[00:22:49.238] Server  LOG     ✓ Compiled in 32ms
+[00:22:50.083] Browser ERROR   uncaughtError: ReferenceError: activities is not defined
+[00:22:50.083] Browser ERROR   uncaughtError: ReferenceError: activities is not defined
+[00:23:18.732] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:23:18.733] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:23:18.796] Server  LOG     ✓ Compiled in 37ms

@@ -1,5 +1,6 @@
 "use client";
 
+import { useAuthStore } from "@/app/auth/store/useAuthStore";
 import { cn } from "@/lib/utils";
 import {
   BarChart3,
@@ -20,6 +21,7 @@ import { usePathname } from "next/navigation";
 
 export function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (open: boolean) => void }) {
   const pathname = usePathname();
+    const {logout} = useAuthStore((state) => state);
 
 
   const navigationItems = [
@@ -42,7 +44,7 @@ export function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (op
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed  h-screen w-64 bg-card border-r border-border flex  flex-col transition-transform duration-300 z-40",
+          "fixed mt-1 h-screen w-64 bg-card border-r border-border flex  flex-col transition-transform duration-300 z-40",
           "lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
@@ -113,7 +115,7 @@ export function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (op
 
         {/* Logout Button - Fixed at bottom */}
         <div className="p-4 border-t border-border flex-shrink-0">
-          <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
+          <button onClick={()=>logout()} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200">
             <LogOut className="w-5 h-5" />
             <span className="text-sm font-medium">Sign Out</span>
           </button>

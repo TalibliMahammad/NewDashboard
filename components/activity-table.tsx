@@ -1,5 +1,6 @@
 "use client";
 
+import { useAuthStore } from "@/app/auth/store/useAuthStore";
 import { log } from "console";
 import { div } from "framer-motion/client";
 import {
@@ -11,6 +12,8 @@ import {
 } from "lucide-react";
 import { useMemo } from "react";
 
+
+
 interface Activity {
   id: string;
   type: "user" | "database" | "config" | "error" | "success";
@@ -19,43 +22,6 @@ interface Activity {
   timestamp: string;
 }
 
-const activities: Activity[] = [
-  {
-    id: "1",
-    type: "user",
-    title: "New user registered",
-    description: "Mahammad Talibli signed up",
-    timestamp: "2 min ago",
-  },
-  {
-    id: "2",
-    type: "database",
-    title: "Database sync completed",
-    description: "Synchronized 1,234 records",
-    timestamp: "5 min ago",
-  },
-  {
-    id: "3",
-    type: "success",
-    title: "Integration successful",
-    description: "Stripe API integration verified",
-    timestamp: "15 min ago",
-  },
-  {
-    id: "4",
-    type: "config",
-    title: "Configuration updated",
-    description: "API rate limits adjusted",
-    timestamp: "1 hour ago",
-  },
-  {
-    id: "5",
-    type: "error",
-    title: "Warning: High latency",
-    description: "Database query took 2.3s",
-    timestamp: "2 hours ago",
-  },
-];
 
 function getActivityIcon(type: Activity["type"]) {
   switch (type) {
@@ -88,7 +54,48 @@ function getActivityColor(type: Activity["type"]) {
 }
 
 export function ActivityTable() {
+  let user = useAuthStore((state) => state.registeredUser);
+
+
+
   const sortedActivities = useMemo(() => {
+    const activities: Activity[] = [
+  {
+    id: "1",
+    type: "user",
+    title: "New user registered",
+    description: `${user?.fullName || "A new user"} signed up`,
+    timestamp: "2 min ago",
+  },
+  {
+    id: "2",
+    type: "database",
+    title: "Database sync completed",
+    description: "Synchronized 1,234 records",
+    timestamp: "5 min ago",
+  },
+  {
+    id: "3",
+    type: "success",
+    title: "Integration successful",
+    description: "Stripe API integration verified",
+    timestamp: "15 min ago",
+  },
+  {
+    id: "4",
+    type: "config",
+    title: "Configuration updated",
+    description: "API rate limits adjusted",
+    timestamp: "1 hour ago",
+  },
+  {
+    id: "5",
+    type: "error",
+    title: "Warning: High latency",
+    description: "Database query took 2.3s",
+    timestamp: "2 hours ago",
+  },
+];
     return [...activities];
   }, []);
 
